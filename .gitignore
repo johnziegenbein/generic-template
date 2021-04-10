@@ -1,3 +1,15 @@
+.idea
+
+build
+build/*
+*/build/*
+
+.gradle
+*/.gradle/*
+
+app/node_modules
+app/dist
+
 # Compiled class file
 *.class
 
