@@ -149,19 +149,19 @@ $mat-dark-theme-background: (
 // Theme Config
 
 body {
-  --primary-color: #171718;
-  --primary-lighter-color: #b9b9ba;
-  --primary-darker-color: #0d0d0e;
+  --primary-color: #3d2ab2;
+  --primary-lighter-color: #c5bfe8;
+  --primary-darker-color: #271999;
   --text-primary-color: #{$light-primary-text};
   --text-primary-lighter-color: #{$dark-primary-text};
   --text-primary-darker-color: #{$light-primary-text};
 }
 
 $mat-primary: (
-  main: #171718,
-  lighter: #b9b9ba,
-  darker: #0d0d0e,
-  200: #171718, // For slide toggle,
+  main: #3d2ab2,
+  lighter: #c5bfe8,
+  darker: #271999,
+  200: #3d2ab2, // For slide toggle,
   contrast : (
     main: $light-primary-text,
     lighter: $dark-primary-text,
@@ -193,19 +193,19 @@ $mat-accent: (
 $theme-accent: mat-palette($mat-accent, main, lighter, darker);
 
 body {
-  --warn-color: #ff2a2a;
-  --warn-lighter-color: #ffbfbf;
-  --warn-darker-color: #ff1919;
+  --warn-color: #ff0000;
+  --warn-lighter-color: #ffb3b3;
+  --warn-darker-color: #ff0000;
   --text-warn-color: #{$light-primary-text};
   --text-warn-lighter-color: #{$dark-primary-text};
   --text-warn-darker-color: #{$light-primary-text};
 }
 
 $mat-warn: (
-  main: #ff2a2a,
-  lighter: #ffbfbf,
-  darker: #ff1919,
-  200: #ff2a2a, // For slide toggle,
+  main: #ff0000,
+  lighter: #ffb3b3,
+  darker: #ff0000,
+  200: #ff0000, // For slide toggle,
   contrast : (
     main: $light-primary-text,
     lighter: $dark-primary-text,
@@ -214,8 +214,8 @@ $mat-warn: (
 );
 $theme-warn: mat-palette($mat-warn, main, lighter, darker);;
 
-$theme: mat-dark-theme($theme-primary, $theme-accent, $theme-warn);
-$altTheme: mat-light-theme($theme-primary, $theme-accent, $theme-warn);
+$theme: mat-light-theme($theme-primary, $theme-accent, $theme-warn);
+$altTheme: mat-dark-theme($theme-primary, $theme-accent, $theme-warn);
 
 // Theme Init
 @include angular-material-theme($theme);
@@ -246,5 +246,3 @@ $altTheme: mat-light-theme($theme-primary, $theme-accent, $theme-warn);
     font-family: 'Roboto';
   }
 }
-
-html, body { height: 100%; background-color: $dark-background }
