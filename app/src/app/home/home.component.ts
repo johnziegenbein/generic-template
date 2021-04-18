@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {GenericService} from '../service/generic.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  genericInfo = '';
+
+  constructor(private genericService: GenericService) { }
 
   ngOnInit() {
+    this.genericService.getGenericInfo().subscribe((data: any[]) => {
+      console.log(data);
+      this.genericInfo = data['content'];
+    });
   }
 
 }
